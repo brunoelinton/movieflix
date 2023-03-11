@@ -23,6 +23,10 @@ public class User implements Serializable {
         joinColumns = @JoinColumn(name = "user_id"),
         inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Set<Role> roles = new HashSet<>();
+
+    @OneToMany(mappedBy = "user")
+    private Set<Review> reviews = new HashSet<>();
+
     public User() {}
 
     public User(Long id, String name, String email, String password) {
@@ -66,6 +70,10 @@ public class User implements Serializable {
 
     public Set<Role> getRoles() {
         return roles;
+    }
+
+    public Set<Review> getReviews() {
+        return reviews;
     }
 
     @Override

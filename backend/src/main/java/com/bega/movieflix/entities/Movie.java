@@ -2,7 +2,9 @@ package com.bega.movieflix.entities;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 @Entity
 @Table(name = "tb_movie")
@@ -22,6 +24,9 @@ public class Movie implements Serializable {
     @ManyToOne
     @JoinColumn(name = "genre_id")
     private Genre genre;
+
+    @OneToMany(mappedBy = "movie")
+    private Set<Review> reviews = new HashSet<>();
 
     public Movie() {}
 
@@ -89,6 +94,10 @@ public class Movie implements Serializable {
 
     public void setGenre(Genre genre) {
         this.genre = genre;
+    }
+
+    public Set<Review> getReviews() {
+        return reviews;
     }
 
     @Override
