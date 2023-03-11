@@ -1,4 +1,4 @@
-package com.devsuperior.movieflix.tests;
+package com.bega.movieflix.tests;
 
 import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.httpBasic;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;

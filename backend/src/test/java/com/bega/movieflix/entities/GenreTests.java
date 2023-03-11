@@ -1,4 +1,4 @@
-package com.devsuperior.movieflix.entities;
+package com.bega.movieflix.entities;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
