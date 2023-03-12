@@ -9,7 +9,7 @@ security:
     client:
       client-id: ${CLIENT_ID:movieflix}
       client-secret: ${CLIENT_SECRET:movieflix123}
-      
+
 jwt:
   secret: ${JWT_SECRET:MY-JWT-SECRET}
   duration: ${JWT_DURATION:86400}
